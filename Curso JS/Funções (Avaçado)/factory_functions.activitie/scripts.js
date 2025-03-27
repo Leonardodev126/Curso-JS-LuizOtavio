@@ -1,3 +1,5 @@
+// Fábrica de funções
+
 function criaCalculadora() {
     return {
         // Atributos

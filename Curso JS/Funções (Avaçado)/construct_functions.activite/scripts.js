@@ -1,3 +1,6 @@
+
+// Função construtora
+
 function Calculadora() {
     this.display = document.querySelector(".display");
 
