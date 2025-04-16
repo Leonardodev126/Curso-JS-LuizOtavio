@@ -6,7 +6,7 @@ let c = "C";
 const numeros = [1, 2, 3];
 [a, b, c] = numeros;
 
-// console.log(a, b, c);
+console.log(numeros);
 
 // ...rest = resto, ...spread = espalha
 const numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
