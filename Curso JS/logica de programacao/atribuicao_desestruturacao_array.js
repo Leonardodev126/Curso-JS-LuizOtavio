@@ -8,7 +8,7 @@ const letras = [b, c, a];
 [a, b, c] = letras;
 console.log(a, b, c);
 
-// console.log(a, b, c);
+console.log(numeros);
 
 // ...rest = resto, ...spread = espalha
 const numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
