@@ -22,4 +22,3 @@ const quadriplica = criaMultiplicador(4);
 console.log(duplica(1));
 console.log(triplica(2));
 console.log(quadriplica(2));
-

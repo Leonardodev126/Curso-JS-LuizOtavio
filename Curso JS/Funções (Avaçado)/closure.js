@@ -7,4 +7,3 @@ function retornaFuncao() {
 
 const funcao = retornaFuncao();
 console.log(funcao);
-

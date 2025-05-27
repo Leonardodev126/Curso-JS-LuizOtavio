@@ -1,11 +1,13 @@
 
-const verdadeira = true;
+let nome = "Leonardinho";
 
-// Let tem escopo de bloco { ... bloco }
-// var só tem escopo de função
+console.log(nome, "nasceu em 2004");
 
-function falaOi () {
-    console.log("Oi")
-}
+const nome2 = "João";
 
-falaOi();
+console.log(nome2);
+
+const primeiroNumero = 10;
+const segundoNumero = 5;
+const resultado = primeiroNumero * segundoNumero;
+console.log(resultado);

@@ -3,8 +3,10 @@ let b = "B";
 let c = "C";
 
 // Atribuição via desestruturação
-const numeros = [1, 2, 3];
-[a, b, c] = numeros;
+const letras = [b, c, a];
+// [a, b, c] = [1, 2, 3];
+[a, b, c] = letras;
+console.log(a, b, c);
 
 // console.log(a, b, c);
 
@@ -19,7 +21,9 @@ console.log(resto);
 
 const atribuicao_com_desestruturação = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-const [, [, , seis]] = atribuicao_com_desestruturação;
+// console.log(numeros2[1][2]);
+
+const [,[,,seis]] = atribuicao_com_desestruturação;
 
 console.log(seis)
 
@@ -39,4 +43,3 @@ const pessoa = {
 const { nome = "Não existe", sobrenome } = pessoa;
 console.log(nome, sobrenome);
 // console.log(pessoa.endereco);
-

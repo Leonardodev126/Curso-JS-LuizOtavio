@@ -1,24 +1,26 @@
-function returnHour() {
+
+// SetInterval para controlar times
+
+function mostraHora() {
     let data = new Date();
 
     return data.toLocaleTimeString("pt-BR", {
         hour12: false
     });
 }
-function funcaoDoInterval() {
-    console.log(returnHour());
-}
 
-// SetInterval mostra os segundos conforme o tempo de milissegundos que eu passar
+
+// SetInterval vai configurar um intervalo de tempo para que alguma função seja executada em determinado momento
+// Ele é executado a cada 2 segundos por exemplo, se você colocar esse tempo de segundos
 const timer = setInterval(function () {
-    console.log(returnHour());
+    console.log(mostraHora());
 }, 1000);
 
-setTimeout(function () {
+// setTimeout executa apenas uma vez
+setTimeout(function() {
     clearInterval(timer);
-}, 3000)
+}, 3000);
 
 setTimeout(function() {
-    console.log("Olá mundo")
-}, 5000)
-
+    console.log("Terminando o tempo");
+}, 5000);

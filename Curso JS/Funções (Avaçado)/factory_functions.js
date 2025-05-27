@@ -7,7 +7,7 @@ function criaPessoa(nome, sobrenome, a, p) {
         nome,
         sobrenome,
         // Getter
-        nomeCompleto() {
+        get nomeCompleto() {
             return `${this.nome} ${this.sobrenome} `;
         },
         // Setter
@@ -28,11 +28,10 @@ function criaPessoa(nome, sobrenome, a, p) {
             return indice.toFixed(2);
         }
     };
-    
 }
 
 const p1 = criaPessoa("Leo", "Keven", 1.75, 65);
-// console.log(p1.imc());
+// console.log(p1.imc);
 // console.log(p1.fala("Falando sobre sucesso"));
 // console.log(p1.imc);
 

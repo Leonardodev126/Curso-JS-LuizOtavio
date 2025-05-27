@@ -1,5 +1,6 @@
+
 alert("Iniciando a página");
 
-confirm("Deseja realmente apagar o conteúdo?")
+// confirm("Deseja realmente apagar o conteúdo?")
 
-prompt("Digite um número")
+// prompt("Digite um número")

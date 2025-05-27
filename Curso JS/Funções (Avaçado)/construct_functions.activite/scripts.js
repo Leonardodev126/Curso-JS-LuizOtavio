@@ -1,59 +1,52 @@
 
-// Função construtora
-
 function Calculadora() {
     this.display = document.querySelector(".display");
 
-    this.inicia = () =>  {
-        this.capturaCliques();
-        this.capturaEnter();
+    this.inicia = () => {
+        this.cliqueBotoes();
+        this.capturaenter();
     }
 
-    this.capturaEnter = () => {
-        this.display.addEventListener("keypress", (e) => {
-            if (e.keyCode === 13) {
-                this.realizaConta();
-            }
-        })
-    }
-
-    this.capturaCliques = () => {
-        document.addEventListener("click", (event) => {
-            const eventTarget = event.target;
-
-            if(eventTarget.classList.contains("btn-num")) this.addNumDisplay(eventTarget);
-            if(eventTarget.classList.contains("btn-clear")) this.clear();
-            if(eventTarget.classList.contains("btn-del")) this.del();
-            if(eventTarget.classList.contains("btn-eq")) this.realizaConta();
+    this.capturaenter = () => {
+        document.addEventListener("keypress", (e) => {
+            if(e.key === "Enter") this.realizaConta();
         });
-    };
+    }
 
-    this.addNumDisplay = (eventTarget) => {
-        this.display.value += eventTarget.innerText;
+    this.cliqueBotoes = () => {
+        document.addEventListener("click", (event) => {
+            const el = event.target;
+
+            if(el.classList.contains("btn-num")) this.btnDisplay(el);
+            if(el.classList.contains("btn-clear")) this.clearDisplay();
+            if(el.classList.contains("btn-del")) this.deleteOne();
+            if(el.classList.contains("btn-eq")) this.realizaConta();
+        });
+    }
+
+    this.btnDisplay = (valor) => {
+        this.display.value += valor.innerText;
         this.display.focus();
-    };
-
-    this.clear = () => this.display.value = "";
-
-    this.del = () => this.display.value = this.display.value.slice(0, -1);
+    }
+    this.clearDisplay = () => this.display.value = "";
+    this.deleteOne = () => this.display.value = this.display.value.slice(0, -1);
 
     this.realizaConta = () => {
         try {
             const conta = eval(this.display.value);
-
-            if (!conta) {
+ 
+            if(!conta) {
                 alert("Conta inválida");
-                return
-            }
+                return;
+            } 
 
             this.display.value = conta;
 
-        } catch (error) {
-            alert("Impossivel finalizar a conta");
+        } catch(e) {
+            alert("Conta inválida");
             return;
         }
     }
-
 }
 
 const calculadora = new Calculadora();

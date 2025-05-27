@@ -33,3 +33,4 @@ function funcao3({ nome, sobrenome, idade }) {
 }
 
 funcao3({ nome: "Leo", sobrenome: "Freitas", idade: 24});
+
